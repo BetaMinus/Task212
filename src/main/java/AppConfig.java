@@ -13,7 +13,7 @@ public class AppConfig {
     }
 
     @Bean(name = "cat")
-    @Scope("prototype")
+    @Scope("prototype") //если убрать, тест не проходит, на создание объекта не влияет, все равно создается один
     public Cat getCat() {
         return new Cat();
     }
